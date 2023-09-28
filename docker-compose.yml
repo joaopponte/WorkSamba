@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - ./data/private:/app/private
+      - ./data/public:/app/public
+      - ./data/usr1:/app/usr1
+      - ./data/usr2:/app/usr2
+
